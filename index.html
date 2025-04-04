@@ -4,14 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlantLife</title>
+    <title>PlanEat - Duurzaam Koken</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h1>PlanEat - Duurzaam Koken</h1>
+    </header>
 
+    <main>
+        <section id="recepten-generator">
+            <h2>Recepten Generator</h2>
+            <label for="budget">Max Budget (€):</label>
+            <input type="number" id="budget" min="1">
+
+            <label for="bereidingstijd">Max Bereidingstijd (min):</label>
+            <input type="number" id="bereidingstijd" min="1">
+
+            <label for="moeilijkheid">Moeilijkheidsgraad:</label>
+            <select id="moeilijkheid">
+                <option value="makkelijk">Makkelijk</option>
+                <option value="gemiddeld">Gemiddeld</option>
+                <option value="moeilijk">Moeilijk</option>
+            </select>
+
+            <label for="dieet">Dieetwensen:</label>
+            <input type="text" id="dieet" placeholder="Bijv. vegetarisch, glutenvrij...">
+
+            <button onclick="genereerRecepten()">Genereer Recepten</button>
+
+            <div id="recepten-lijst"></div>
+        </section>
+
+        <section id="boodschappenlijst">
+            <h2>Boodschappenlijst</h2>
+            <textarea id="boodschappen" rows="5" readonly></textarea>
+        </section>
+
+        <section id="bewaartips">
+            <h2>Bewaartips</h2>
+            <p>Voeg slimme bewaartips toe om voedselverspilling tegen te gaan.</p>
+        </section>
+
+        <section id="forum">
+            <h2>Forum</h2>
+            <p>Hier kunnen gebruikers ingrediënten ruilen (dummy-functionaliteit).</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
